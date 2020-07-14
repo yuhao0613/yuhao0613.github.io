@@ -22,27 +22,33 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yhoo&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="这是我的第一篇博文。未来我将会在atom工具上使用markdown语法来撰写博文了，还是非常激动滴。对于一个markdown初学者来说，没有必要学习各种列表、文档目录的复杂功能，只需要一些最基本的功能就好了。但是我在网上搜索博文时，都是一些冗长的文章，看得头大。因此下面整理的内容，都是完成一篇博文所需要的最最基本语法，帮助我快速写好一篇文章，而一些暂时不重要的细节操作，就统统删去了～本文参考了这篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown实用语法（撰写一篇文章的最基本语法）">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/Markdown%E6%9C%80%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="Yhoo&#39;s Blog">
+<meta property="og:description" content="这是我的第一篇博文。未来我将会在atom工具上使用markdown语法来撰写博文了，还是非常激动滴。对于一个markdown初学者来说，没有必要学习各种列表、文档目录的复杂功能，只需要一些最基本的功能就好了。但是我在网上搜索博文时，都是一些冗长的文章，看得头大。因此下面整理的内容，都是完成一篇博文所需要的最最基本语法，帮助我快速写好一篇文章，而一些暂时不重要的细节操作，就统统删去了～本文参考了这篇">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2020/03/09/16/02/silk-4916174_1280.jpg">
+<meta property="article:published_time" content="2020-07-14T02:38:41.000Z">
+<meta property="article:modified_time" content="2020-07-14T04:00:34.682Z">
 <meta property="article:author" content="Yuhao Liu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2020/03/09/16/02/silk-4916174_1280.jpg">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/07/14/Markdown%E6%9C%80%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Yhoo's Blog</title>
+  <title>Markdown实用语法（撰写一篇文章的最基本语法） | Yhoo's Blog</title>
   
 
 
@@ -131,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -143,6 +149,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字格式"><span class="nav-number">2.</span> <span class="nav-text">文字格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码段"><span class="nav-number">4.</span> <span class="nav-text">代码段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）代码句"><span class="nav-number">4.1.</span> <span class="nav-text">1）代码句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）代码段"><span class="nav-number">4.2.</span> <span class="nav-text">2）代码段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）代码段-方法2"><span class="nav-number">4.3.</span> <span class="nav-text">3）代码段-方法2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">5.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入或引用图片"><span class="nav-number">6.</span> <span class="nav-text">插入或引用图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入或引用链接"><span class="nav-number">7.</span> <span class="nav-text">插入或引用链接</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -186,9 +193,10 @@
       <div class="main-inner">
         
 
-        <div class="content index posts-expand">
+        <div class="content post posts-expand">
           
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -204,10 +212,9 @@
       <meta itemprop="name" content="Yhoo's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/14/Markdown%E6%9C%80%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Markdown实用语法（撰写一篇文章的最基本语法）</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Markdown实用语法（撰写一篇文章的最基本语法）
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -231,7 +238,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>这是我的第一篇博文。未来我将会在atom工具上使用markdown语法来撰写博文了，还是非常激动滴。对于一个markdown初学者来说，没有必要学习各种列表、文档目录的复杂功能，只需要一些最基本的功能就好了。但是我在网上搜索博文时，都是一些冗长的文章，看得头大。<br>因此下面整理的内容，都是完成一篇博文所需要的最最基本语法，帮助我快速写好一篇文章，而一些暂时不重要的细节操作，就统统删去了～本文参考了<a href="https://blog.csdn.net/sun8112133/article/details/79871702?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">这篇基础操作文章</a>和<a href="https://www.jianshu.com/p/280c6a6f2594" target="_blank" rel="noopener">这篇关于插入图片的文章</a></p>
+        <p>这是我的第一篇博文。未来我将会在atom工具上使用markdown语法来撰写博文了，还是非常激动滴。对于一个markdown初学者来说，没有必要学习各种列表、文档目录的复杂功能，只需要一些最基本的功能就好了。但是我在网上搜索博文时，都是一些冗长的文章，看得头大。<br>因此下面整理的内容，都是完成一篇博文所需要的最最基本语法，帮助我快速写好一篇文章，而一些暂时不重要的细节操作，就统统删去了～本文参考了<a href="https://blog.csdn.net/sun8112133/article/details/79871702?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">这篇基础操作文章</a>和<a href="https://www.jianshu.com/p/280c6a6f2594" target="_blank" rel="noopener">这篇关于插入图片的文章</a></p>
 <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><table>
 <thead>
 <tr>
@@ -295,21 +302,23 @@
 <p>其中，<code>[figure title]</code>是图片的标签，可以填写任意文字，随自己开心就好，也可以空着不写，<strong>但是<code>[]</code>必须要写，不能省略。</strong><br><code>&quot;optional text&quot;</code>是鼠标悬置于图片上会出现的标题文字，可以不写.<br><img src="https://cdn.pixabay.com/photo/2020/03/09/16/02/silk-4916174_1280.jpg" alt="" title="option text"></p>
 <h2 id="插入或引用链接"><a href="#插入或引用链接" class="headerlink" title="插入或引用链接"></a>插入或引用链接</h2><p><code>[苹果官网](http://www.apple.com/cn/ &quot;苹果中国&quot;)</code><br>输入上述代码，即可得到右边的这个段内链接，非常方便，可以点这个<a href="http://www.apple.com/cn/" target="_blank" rel="noopener" title="苹果中国">苹果官网</a>链接。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
